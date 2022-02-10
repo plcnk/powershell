@@ -126,9 +126,9 @@ $newKrbTgtPasswordSecure = ConvertTo-SecureString $newKrbTgtPassword -AsPlainTex
 
 # Try To Set The New Password On The Targeted KrbTgt Account And If Not Successfull Throw Error
 Try {
-    Set-ADAccountPassword -Identity $krbTgtObjectDN -Server $targetedADdomainRWDC -Reset -NewPassword $newKrbTgtPasswordSecure
+	Set-ADAccountPassword -Identity $krbTgtObjectDN -Server $targetedADdomainRWDC -Reset -NewPassword $newKrbTgtPasswordSecure
 } Catch {
-    Logging ""
+	Logging ""
 	Logging "  --> Setting the new password for [$krbTgtObjectDN] FAILED on RWDC [$targetedADdomainRWDC]!..." "ERROR"
 	Logging "" "ERROR"
 }
