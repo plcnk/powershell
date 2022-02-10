@@ -13,3 +13,6 @@ A collection of some PowerShell scripts I made.
   * Account Operators
   * Backup Operators
   * Server Operators
+* [reset_krbtgt_password.ps1](https://github.com/plcnk/powershell/blob/master/reset_krbtgt_password.ps1): This script allows you to reset the krbtgt account password. It is derived from the interactive script available on [Microsoft's GitHub](https://github.com/microsoft/New-KrbtgtKeys.ps1). This script has 2 mandatory parameters:
+  * krbTgtObjectDN: The krbtgt account DN (e.g. "CN=krbtgt,CN=Users,DC=domain,DC=lan" )
+  * targetedADdomainRWDC: The targeted Domain Controller (e.g. "dc1.domain.lan")
